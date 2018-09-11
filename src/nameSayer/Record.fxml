@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nameSayer.RecordController">
+   <top>
+      <Label fx:id="label" text="Press &quot;Record&quot; to begin recording for five seconds" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#next" text="Next" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="recordButton" mnemonicParsing="false" onAction="#record" text="Record">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin></Button>
+            <ProgressIndicator fx:id="indicator" prefHeight="99.0" prefWidth="800.0" progress="0.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ProgressIndicator>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

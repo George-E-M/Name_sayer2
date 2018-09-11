@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nameSayer.MenuController">
+   <left>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="400.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Name Sayer">
+               <VBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <StackPane prefHeight="250.0" prefWidth="200.0">
+               <children>
+                  <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="400.0">
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </MediaView>
+                  <Label fx:id="helperLabel" text="Please select a recording or create a new one." />
+                  <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ProgressBar fx:id="videoBar" prefHeight="20.0" prefWidth="400.0" progress="0.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ProgressBar>
+                  <Button fx:id="stopButton" mnemonicParsing="false" onAction="#stopPlaying" text="Stop">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Current Recordings">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <ListView fx:id="listView" prefHeight="280.0" prefWidth="300.0">
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" top="25.0" />
+               </VBox.margin>
+            </ListView>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="createButton" mnemonicParsing="false" onAction="#createCreation" text="Create" />
+                  <Button fx:id="playButton" mnemonicParsing="false" onAction="#playCreation" text="Play">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteCreation" text="Delete">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" text="Exit" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nameSayer.CreateController">
+   <center>
+      <TextField fx:id="textField" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="250.0" right="250.0" />
+         </BorderPane.margin>
+      </TextField>
+   </center>
+   <top>
+      <Label text="Please enter the name of your new Recording" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="50.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#beginRecording" text="Next" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="40.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
